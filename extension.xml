@@ -1,0 +1,18 @@
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+	<id>com.google.api.games</id>
+	<versionNumber>1</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>lib.jar</nativeLibrary>
+				<initializer>com.google.api.games.Extension</initializer>
+				<finalizer>com.google.api.games.Extension</finalizer>
+			</applicationDeployment>
+		</platform>
+
+		<platform name="default"> 
+            		<applicationDeployment/> 
+        	</platform> 
+
+	</platforms>
+</extension>
