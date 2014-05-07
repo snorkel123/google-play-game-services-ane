@@ -10,9 +10,9 @@ package com.google.api.games
 			GameIds.xml = xml;
 		}
 		
-		public static function getIdByName(name:String):String
+		public static function getIdByName(pName:String):String
 		{
-			var xnList:XMLList = xml.string.(@name == name);
+			var xnList:XMLList = xml.string.(@name == pName);
 			return xnList[0];
 		}
 	
