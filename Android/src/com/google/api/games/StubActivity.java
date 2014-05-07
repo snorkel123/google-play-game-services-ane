@@ -58,7 +58,9 @@ public class StubActivity extends Activity {
 			SignInActivity.mHelper.onDisconnectedFromGoogleActivity();
 
 		}
-
+		isShown = false;
+		finish();
+		
 	}
 
 }
