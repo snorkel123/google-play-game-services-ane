@@ -11,6 +11,7 @@
 	<property name="fre.lib" value="${FLEX_HOME}/lib/android/FlashRuntimeExtensions.jar" />
 	<property name="java.classes" value="Android/src" />
 	<property name="as.classes" value="as3/src" />
+	<property name="as.default" value="default/src" />
 	<property name="extension.id" value="com.google.api.games" />
 
 
@@ -69,11 +70,29 @@
 
 		<unzip src="temp/libs/lib.swc" dest="temp/libs/"/>
 		<copy file="temp/libs/library.swf" tofile="temp/ane/android/library.swf"/>
-		<move file="temp/libs/library.swf" tofile="temp/ane/default/library.swf"/>
+		<!--<move file="temp/libs/library.swf" tofile="temp/ane/default/library.swf"/>-->
 		<move file="temp/libs/lib.swc" tofile="temp/ane/lib.swc"/>
 	</target>
 
+	<target name="compile.default" description="Build default swc library">
+		<compc 
+			failonerror="true"
+			use-network="false"
+			debug="false"
+			swf-version="16"
+            output="temp/libs/default.swc">
+			<load-config filename="${FLEX_HOME}/frameworks/air-config.xml" />
+			<include-sources dir="${as.default}">
+				<include name="**/*.as*" />
+			</include-sources>
+		</compc>
 
+		<unzip src="temp/libs/default.swc" dest="temp/libs/default"/>
+		<move file="temp/libs/default/library.swf" tofile="temp/ane/default/library.swf"/>
+		
+	</target>
+	
+	
 	<target name="build.ane" description="Making ane file">
 		<exec executable="${FLEX_HOME}/bin/adt.bat" failonerror="true">
 			<arg value="-package"/>
@@ -92,7 +111,7 @@
 	</target>
 
 
-	<target name="main" description="Run all targets" depends="make.dirs, compile.jar, compile.swc, copy.files, build.ane" />
+	<target name="main" description="Run all targets" depends="make.dirs, compile.jar, compile.swc, copy.files,compile.default, build.ane" />
 
 
 </project>
