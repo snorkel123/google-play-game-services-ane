@@ -1,12 +1,11 @@
 google-play-game-services-ane
 =============================
 
-google-play-game-services-ane is an Adobe Air Native Extension which gives you access to [Play Games services]. ANE supports Android
+google-play-game-services-ane is an Adobe Air Native Extension which gives you access to [Play Games services]
 
 
 >The Play Games services SDK provides cross-platform Games services that lets you easily integrate popular gaming features such as achievements, leaderboards, Cloud Save, and real-time multiplayer (on Android) in your tablet and mobile games.
 
-Note that ANE supports Achievements, Leaderboards and Sign-in API. More APIs will be added in the future
 
 # Supported platforms
 - Android
