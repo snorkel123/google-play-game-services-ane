@@ -1,6 +1,8 @@
 google-play-game-services-ane
 =============================
 
+<b>NOTE:</b> This ANE is officially out of support due to my lack of time
+
 google-play-game-services-ane is an Adobe Air Native Extension which gives you access to [Play Games services]
 
 
