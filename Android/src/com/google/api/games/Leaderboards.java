@@ -18,7 +18,7 @@ public class Leaderboards {
 			
 
 			Intent intent = new Intent(context.getActivity(), StubActivity.class);
-			intent.setAction(StubActivity.ACTION_SHOW_LEADERBOARD_BY_ID_ACTIVITY);
+			intent.setAction(StubActivity.ACTION_SHOW_LEADERBOARDS_ACTIVITY);
 			context.getActivity().startActivity(intent);
 			return null;
 		}
