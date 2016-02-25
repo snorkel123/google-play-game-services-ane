@@ -22,9 +22,9 @@ public class StubActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (isShown) {
+		if(savedInstanceState != null)
 			return;
-		}
+
 
 		if (getIntent().getAction().equals(ACTION_SHOW_ACHIEVEMENTS_ACTIVITY)) {
 			startActivityForResult(
@@ -47,6 +47,7 @@ public class StubActivity extends Activity {
 					SignInActivity.mHelper.getApiClient(), leaderboardId),
 					REQUEST_CODE);
 		}
+		
 
 		isShown = true;
 	}
@@ -58,7 +59,8 @@ public class StubActivity extends Activity {
 			SignInActivity.mHelper.onDisconnectedFromGoogleActivity();
 
 		}
-
+		finish();
+		
 	}
 
 }

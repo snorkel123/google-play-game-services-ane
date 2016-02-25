@@ -5,7 +5,7 @@ package com.google.api.games
 	{
 		private static var xml:XML;
 		
-		public static function initialize(xml:XML)
+		public static function initialize(xml:XML) : void
 		{
 			GameIds.xml = xml;
 		}

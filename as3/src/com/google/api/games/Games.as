@@ -25,6 +25,11 @@ package com.google.api.games
 			Leaderboards = new iLeaderboards();
 		}
 		
+		public static function isSupported() : Boolean
+		{
+			return true;
+		}
+		
 		public static function addStatusEventListener(listener:Function):void
 		{
 			context.addEventListener(StatusEvent.STATUS, listener);
